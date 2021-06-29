@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interfaces\Repositories\**" />
+    <Compile Remove="UseCases\Quotations\**" />
+    <EmbeddedResource Remove="Interfaces\Repositories\**" />
+    <EmbeddedResource Remove="UseCases\Quotations\**" />
+    <None Remove="Interfaces\Repositories\**" />
+    <None Remove="UseCases\Quotations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Behaviours\ValidationBehaviour.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation" Version="10.2.3" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.2.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.7" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.10" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\TimeSheetApproval.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
